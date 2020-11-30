@@ -2,7 +2,7 @@ USE accountingMaterials;
 
 GO
 CREATE VIEW MaterialsName AS
-SELECT Name FROM Materials ORDER BY Name;
+SELECT Name FROM Materials;
 
 GO
 CREATE VIEW MaterialCountInDebtAct AS
@@ -59,19 +59,19 @@ JOIN Employee ON Employee.ID = DebtAct.EmployeeID;
 
 GO
 CREATE VIEW MaterialsPrice AS
-SELECT ID, Name, Price FROM Materials ORDER BY Price;
+SELECT ID, Name, Price FROM Materials;
 
 GO
 CREATE VIEW EmployeePosition AS
-SELECT Name, Position FROM Employee ORDER BY Position;
+SELECT Name, Position FROM Employee ;
 
 GO
 CREATE VIEW UnitName AS
-SELECT ID, Name FROM Unit ORDER BY Name;
+SELECT ID, Name FROM Unit;
 
 GO
 CREATE VIEW ManufacturingCostName AS
-SELECT ID, Name FROM ManufacturingCost ORDER BY Name;
+SELECT ID, Name FROM ManufacturingCost;
 
 GO
 Create VIEW WaybillEmployee AS
