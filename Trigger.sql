@@ -20,7 +20,7 @@ FROM DELETED;
 
 GO
 CREATE TRIGGER Employee_INSERT
-ON Materials
+ON Employee
 AFTER INSERT
 AS
 INSERT INTO EmployeeHistory (EmployeeId, Operation)
@@ -29,7 +29,7 @@ FROM INSERTED;
 
 GO
 CREATE TRIGGER Employee_DELETE
-ON Materials
+ON Employee
 AFTER DELETE
 AS
 INSERT INTO EmployeeHistory (EmployeeId, Operation)
@@ -38,7 +38,7 @@ FROM DELETED;
 
 GO
 CREATE TRIGGER Unit_INSERT
-ON Materials
+ON Unit
 AFTER INSERT
 AS
 INSERT INTO UnitHistory (UnitId, Operation)
@@ -47,7 +47,7 @@ FROM INSERTED;
 
 GO
 CREATE TRIGGER Unit_DELETE
-ON Materials
+ON Unit
 AFTER DELETE
 AS
 INSERT INTO UnitHistory (UnitId, Operation)
@@ -56,7 +56,7 @@ FROM DELETED;
 
 GO
 CREATE TRIGGER ManufacturingCost_INSERT
-ON Materials
+ON ManufacturingCost
 AFTER INSERT
 AS
 INSERT INTO ManufacturingCostHistory (ManufacturingCostId, Operation)
@@ -65,7 +65,7 @@ FROM INSERTED;
 
 GO
 CREATE TRIGGER ManufacturingCost_DELETE
-ON Materials
+ON ManufacturingCost
 AFTER DELETE
 AS
 INSERT INTO ManufacturingCostHistory (ManufacturingCostId, Operation)
