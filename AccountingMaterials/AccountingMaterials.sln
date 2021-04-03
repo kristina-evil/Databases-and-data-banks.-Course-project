@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.WebAPI", "AccountingMaterials.WebAPI\AccountingMaterials.WebAPI.csproj", "{51836EAD-D029-43F2-93BF-040792B4C3F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.Domain.Entites", "AccountongMaterials.Domain.Entites\AccountingMaterials.Domain.Entites.csproj", "{D29FDB59-D0D7-4C22-B7CE-4B5B368E5087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.Domain.Abstractions", "AccountingMaterials.Domain.Abstractions\AccountingMaterials.Domain.Abstractions.csproj", "{756FED1D-3BA6-4245-9ADB-0132A566F99F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.Domain.Contracts", "AccountingMaterials.Domain.Contracts\AccountingMaterials.Domain.Contracts.csproj", "{337F3088-C0F0-4DF7-B0C5-8CAF70B29904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.Domain.Services", "AccountingMaterials.Domain.Services\AccountingMaterials.Domain.Services.csproj", "{22254E7B-0C6F-4F03-B0E5-FBF4D4747079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingMaterials.Infrastructure.Data", "AccountingMaterials.Infrastructure.Data\AccountingMaterials.Infrastructure.Data.csproj", "{FD99BDDF-E857-43D9-A38F-BEB72AF3EDE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51836EAD-D029-43F2-93BF-040792B4C3F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51836EAD-D029-43F2-93BF-040792B4C3F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51836EAD-D029-43F2-93BF-040792B4C3F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51836EAD-D029-43F2-93BF-040792B4C3F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29FDB59-D0D7-4C22-B7CE-4B5B368E5087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29FDB59-D0D7-4C22-B7CE-4B5B368E5087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29FDB59-D0D7-4C22-B7CE-4B5B368E5087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29FDB59-D0D7-4C22-B7CE-4B5B368E5087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756FED1D-3BA6-4245-9ADB-0132A566F99F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756FED1D-3BA6-4245-9ADB-0132A566F99F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756FED1D-3BA6-4245-9ADB-0132A566F99F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756FED1D-3BA6-4245-9ADB-0132A566F99F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337F3088-C0F0-4DF7-B0C5-8CAF70B29904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337F3088-C0F0-4DF7-B0C5-8CAF70B29904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337F3088-C0F0-4DF7-B0C5-8CAF70B29904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337F3088-C0F0-4DF7-B0C5-8CAF70B29904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22254E7B-0C6F-4F03-B0E5-FBF4D4747079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22254E7B-0C6F-4F03-B0E5-FBF4D4747079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22254E7B-0C6F-4F03-B0E5-FBF4D4747079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22254E7B-0C6F-4F03-B0E5-FBF4D4747079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD99BDDF-E857-43D9-A38F-BEB72AF3EDE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD99BDDF-E857-43D9-A38F-BEB72AF3EDE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD99BDDF-E857-43D9-A38F-BEB72AF3EDE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD99BDDF-E857-43D9-A38F-BEB72AF3EDE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5E72758-5554-4AFD-8FE8-643BAD7611EE}
+	EndGlobalSection
+EndGlobal
