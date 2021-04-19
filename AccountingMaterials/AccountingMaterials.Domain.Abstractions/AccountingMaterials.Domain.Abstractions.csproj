@@ -4,4 +4,11 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AccountingMaterials.Domain.Contracts\AccountingMaterials.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\AccountingMaterials.Domain.Services\AccountingMaterials.Domain.Services.csproj" />
+    <ProjectReference Include="..\AccountingMaterials.Infrastructure.Data\AccountingMaterials.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\AccountongMaterials.Domain.Entites\AccountingMaterials.Domain.Entites.csproj" />
+  </ItemGroup>
+
 </Project>
