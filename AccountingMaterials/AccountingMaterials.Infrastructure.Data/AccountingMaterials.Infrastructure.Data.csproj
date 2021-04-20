@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AccountingMaterials.Domain.Abstractions\AccountingMaterials.Domain.Abstractions.csproj" />
+    <ProjectReference Include="..\AccountingMaterials.Domain.Contracts\AccountingMaterials.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\AccountingMaterials.Domain.Services\AccountingMaterials.Domain.Services.csproj" />
     <ProjectReference Include="..\AccountongMaterials.Domain.Entites\AccountingMaterials.Domain.Entites.csproj" />
   </ItemGroup>
 

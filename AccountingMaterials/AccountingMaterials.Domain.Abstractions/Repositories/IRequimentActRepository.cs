@@ -10,6 +10,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<RequiementAct> GetById(long id);
         public Task Add(RequiementAct requiementAct);
         public Task Delete(long id);
-        public Task Save();
     }
 }

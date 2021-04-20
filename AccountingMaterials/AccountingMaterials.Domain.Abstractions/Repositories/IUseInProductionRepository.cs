@@ -10,6 +10,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<UseInProduction> GetById(long id);
         public Task Add(UseInProduction useInProduction);
         public Task Delete(long id);
-        public Task Save();
     }
 }

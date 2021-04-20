@@ -10,6 +10,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<Waybill> GetById(long id);
         public Task Add(Waybill waybill);
         public Task Delete(long id);
-        public Task Save();
     }
 }

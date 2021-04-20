@@ -9,8 +9,6 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<IList<ManufacturingCost>> GetAll();
         public Task<ManufacturingCost> GetById(long id);
         public Task Add(ManufacturingCost manufacturingCost);
-        public Task Update(long id, ManufacturingCost manufacturingCost);
         public Task Delete(long id);
-        public Task Save();
     }
 }

@@ -10,6 +10,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<DebtAct> GetById(long id);
         public Task Add(DebtAct debtAct);
         public Task Delete(long id);
-        public Task Save();
     }
 }

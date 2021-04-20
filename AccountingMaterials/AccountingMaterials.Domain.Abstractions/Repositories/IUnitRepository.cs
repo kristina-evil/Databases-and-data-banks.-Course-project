@@ -9,8 +9,6 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<IList<Unit>> GetAll();
         public Task<Unit> GetById(long id);
         public Task Add(Unit unit);
-        public Task Update(long id, Unit unit);
         public Task Delete(long id);
-        public Task Save();
     }
 }

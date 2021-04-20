@@ -11,6 +11,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<RequirementInvoice> GetById(long id);
         public Task Add(RequirementInvoice requirementInvoice);
         public Task Delete(long id);
-        public Task Save();
     }
 }

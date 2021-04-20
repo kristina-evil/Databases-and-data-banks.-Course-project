@@ -10,6 +10,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task<Timecards> GetById(long id);
         public Task Add(Timecards timecards);
         public Task Delete(long id);
-        public Task Save();
     }
 }

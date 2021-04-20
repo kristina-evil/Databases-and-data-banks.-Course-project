@@ -11,6 +11,5 @@ namespace AccountingMaterials.Domain.Abstractions.Repositories
         public Task Add(Employee employee);
         public Task Update(long id, Employee employee);
         public Task Delete(long id);
-        public Task Save();
     }
 }
