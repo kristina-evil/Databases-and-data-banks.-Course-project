@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using AccountingMaterials.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using AccountingMaterials.Domain.Abstractions.Repositories;
 
 namespace AccountingMaterials.WebAPI
 {
@@ -28,6 +29,18 @@ namespace AccountingMaterials.WebAPI
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddScoped<IDebtActRepository, DebtActRepository>();
+            services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<IManufacturingCostsRepository, ManufacturingCostsRepository>();
+            services.AddScoped<IMaterialsRepository, MaterialsRepository>();
+            services.AddScoped<IRequimentActRepository, RequimentActRepository>();
+            services.AddScoped<IRequirementInvoiceRepository, RequirementInvoiceRepository>();
+            services.AddScoped<ITimecardRepository, TimecardRepository>();
+            services.AddScoped<IUnitRepository, UnitRepository>();
+            services.AddScoped<IUseInProductionRepository, UseInProductionRepository>();
+            services.AddScoped<IUseOfMaterialsRepository, UseOfMaterialsRepository>();
+            services.AddScoped<IWaybillRepository, WaybillRepository>();
 
             services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
