@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,16 @@ import { DetailsPageComponent } from './pages/details-page/details-page.componen
     FooterComponent,
     NavbarComponent,
     AboutPageComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

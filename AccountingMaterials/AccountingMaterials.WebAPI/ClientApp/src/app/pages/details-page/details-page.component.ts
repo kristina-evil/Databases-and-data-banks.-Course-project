@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Person } from '../../person';
-import { PersonService } from '../../person.service';
+import { Employee } from '../../models/employee.interface';
+import { EmployeeService } from '../../employee.service';
 
 @Component({
   selector: 'kks-details-page',
@@ -10,21 +10,21 @@ import { PersonService } from '../../person.service';
   styleUrls: ['./details-page.component.scss'],
 })
 export class DetailsPageComponent implements OnInit {
-  person: Person;
+  employee: Employee;
 
   constructor(
     private route: ActivatedRoute,
-    private personService: PersonService
+    private employeeService: EmployeeService
   ) {}
 
   ngOnInit(): void {
-    this.getPerson();
+    this.getEmployee();
   }
 
-  getPerson(): void {
+  getEmployee(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.personService
-      .getPerson(id)
-      .subscribe((person) => (this.person = person));
+    this.employeeService
+      .getEmployee(id)
+      .subscribe((employee) => (this.employee = employee));
   }
 }
