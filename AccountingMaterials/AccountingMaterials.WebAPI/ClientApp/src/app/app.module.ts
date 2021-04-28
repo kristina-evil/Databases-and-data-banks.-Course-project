@@ -9,6 +9,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from 'src/material.module';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { DetailsPageComponent } from './pages/details-page/details-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     HomePageComponent,
     FooterComponent,
     NavbarComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    DetailsPageComponent
   ],
   imports: [
     BrowserModule,

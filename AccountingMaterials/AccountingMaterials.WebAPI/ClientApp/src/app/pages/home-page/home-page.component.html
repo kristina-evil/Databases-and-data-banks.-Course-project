@@ -1,1 +1,8 @@
-<p>home-page works!</p>
+<h2>People</h2>
+<ul class="people">
+  <li *ngFor="let person of people">
+    <a routerLink="/details/{{ person.id }}">
+      <span class="badge">{{ person.id }}</span> {{ person.name }}
+    </a>
+  </li>
+</ul>
