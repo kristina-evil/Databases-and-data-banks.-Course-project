@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { EmployeesDataService } from 'src/app/services/employees.service';
 
 import { Employee } from '../../models/employee.interface';
-import { EmployeeService } from '../../employee.service';
 
 @Component({
   selector: 'kks-details-page',
@@ -14,7 +14,7 @@ export class DetailsPageComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private employeeService: EmployeeService
+    private employeesService: EmployeesDataService
   ) {}
 
   ngOnInit(): void {
@@ -23,8 +23,12 @@ export class DetailsPageComponent implements OnInit {
 
   getEmployee(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.employeeService
-      .getEmployee(id)
+    this.employeesService
+      .getEmloyeeById(id)
       .subscribe((employee) => (this.employee = employee));
+  }
+
+  update() {
+    this.employeesService.updateEmployee(this.employee).subscribe();
   }
 }

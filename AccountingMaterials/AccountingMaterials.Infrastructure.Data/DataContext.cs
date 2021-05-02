@@ -9,6 +9,7 @@ namespace AccountingMaterials.Infrastructure.Data
         public DataContext(DbContextOptions<DataContext> options)
             : base(options)
         {
+            Database.EnsureCreated();
         }
 
         public DbSet<Materials> Materials { get; set; }

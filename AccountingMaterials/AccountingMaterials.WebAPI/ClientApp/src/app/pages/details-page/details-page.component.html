@@ -6,6 +6,7 @@
     <input id="employee-name" [(ngModel)]="employee.name" placeholder="name" />
 
     <label for="employee-age">Age: </label>
-    <input id="employee-age" [(ngModel)]="employee.age" placeholder="age" />
+    <input id="employee-age" [(ngModel)]="employee.position" placeholder="position" />
+    <button (click)="update()" color="primary">Submit</button>
   </div>
 </div>

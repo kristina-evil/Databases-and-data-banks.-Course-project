@@ -9,40 +9,42 @@ namespace AccountingMaterials.Infrastructure.Data
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly DataContext dataContext;
+        private readonly DataContext _dataContext;
 
         public EmployeeRepository(DataContext dataContext)
         {
-            this.dataContext = dataContext ?? throw new ArgumentNullException(nameof(dataContext));
+            this._dataContext = dataContext ?? throw new ArgumentNullException(nameof(dataContext));
         }
 
         public async Task<IList<Employee>> GetAll()
         {
-            return await this.dataContext.Employees.ToListAsync();
+            return await this._dataContext.Employees.ToListAsync();
         }
 
         public async Task<Employee> GetById(long id)
         {
-            return await this.dataContext.Employees.FindAsync(id);
+            return await this._dataContext.Employees.FindAsync(id);
         }
 
         public async Task Add(Employee employee)
         {
-            this.dataContext.Employees.Add(employee);
-            await this.dataContext.SaveChangesAsync();
+            this._dataContext.Employees.Add(employee);
+            await this._dataContext.SaveChangesAsync();
         }
 
         public async Task Delete(long id)
         {
-            this.dataContext.Employees.Remove(this.dataContext.Employees.Find(id));
-            await this.dataContext.SaveChangesAsync();
+            this._dataContext.Employees.Remove(this._dataContext.Employees.Find(id));
+            await this._dataContext.SaveChangesAsync();
         }
 
-        public async Task Update(long id, Employee employee)
+        public async Task Update(Employee employee)
         {
-            var person = this.dataContext.Employees.Find(id);
-            person.Position = employee.Position;
-            await this.dataContext.SaveChangesAsync();
+            await Task.Run(() => _dataContext.Employees.Attach(employee));
+            
+            _dataContext.Entry(employee).State = EntityState.Modified;
+            
+            await _dataContext.SaveChangesAsync();
         }
     }
 }
