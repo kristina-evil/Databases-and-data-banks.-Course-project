@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeesDataService } from 'src/app/services/employees.service';
 
 import { Employee } from '../../models/employee.interface';
-import { EmployeeService } from '../../employee.service';
 
 @Component({
   selector: 'app-home-page',
@@ -11,15 +11,15 @@ import { EmployeeService } from '../../employee.service';
 export class HomePageComponent implements OnInit {
   employees: Employee[];
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeesService: EmployeesDataService) {}
 
   ngOnInit(): void {
     this.getEmployees();
   }
 
   getEmployees(): void {
-    this.employeeService
-      .getEmployees()
+    this.employeesService
+      .getEmployeesList()
       .subscribe((employees) => (this.employees = employees));
   }
 }

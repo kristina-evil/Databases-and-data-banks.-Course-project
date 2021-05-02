@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AccountingMaterials.WebAPI.Controllers
 {
-    [Route("api/Employee")]
+    [Route("api/Employees")]
     [ApiController]
     public class EmployeeController : Controller
     {
@@ -38,10 +38,10 @@ namespace AccountingMaterials.WebAPI.Controllers
             await this.employeeRepository.Add(employee);
         }
 
-        [HttpPut("{id:long}")]
-        public async Task Put([FromRoute] long id, [FromBody] Employee employee)
+        [HttpPut]
+        public async Task Put(Employee employee)
         {
-            await this.employeeRepository.Update(id, employee);
+            await this.employeeRepository.Update(employee);
         }
 
         [HttpDelete("{id:long}")]

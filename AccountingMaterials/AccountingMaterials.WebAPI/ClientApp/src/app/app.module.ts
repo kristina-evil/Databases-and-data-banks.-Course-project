@@ -11,6 +11,8 @@ import { MaterialModule } from 'src/material.module';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { DetailsPageComponent } from './pages/details-page/details-page.component';
 import { FormsModule } from '@angular/forms';
+import { EmployeesDataService } from './services/employees.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,8 +29,11 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    EmployeesDataService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
