@@ -13,6 +13,7 @@ import { DetailsPageComponent } from './pages/details-page/details-page.componen
 import { FormsModule } from '@angular/forms';
 import { EmployeesDataService } from './services/employees.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialsPageComponent } from './pages/materials-page/materials-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     AboutPageComponent,
     DetailsPageComponent,
+    MaterialsPageComponent,
   ],
   imports: [
     FormsModule,
@@ -31,9 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     HttpClientModule,
   ],
-  providers: [
-    EmployeesDataService
-  ],
+  providers: [EmployeesDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
