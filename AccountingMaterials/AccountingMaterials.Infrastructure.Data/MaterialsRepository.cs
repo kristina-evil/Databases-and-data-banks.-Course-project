@@ -38,11 +38,13 @@ namespace AccountingMaterials.Infrastructure.Data
             await this.dataContext.SaveChangesAsync();
         }
 
-        public async Task Update(long id, Materials materials)
+        public async Task Update(Materials materials)
         {
-            var material = this.dataContext.Materials.Find(id);
-            material.Price = materials.Price;
-            await this.dataContext.SaveChangesAsync();
+            await Task.Run(() => dataContext.Materials.Attach(materials));
+            
+            dataContext.Entry(materials).State = EntityState.Modified;
+            
+            await dataContext.SaveChangesAsync();
         }
     }
 }
