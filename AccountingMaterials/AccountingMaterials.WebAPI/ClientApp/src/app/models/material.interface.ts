@@ -1,4 +1,6 @@
 export interface Material {
-  type: string;
-  cost: number;
+  id: number;
+  name: string;
+  number: number;
+  price: number;
 }
