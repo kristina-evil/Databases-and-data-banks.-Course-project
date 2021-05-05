@@ -38,10 +38,9 @@ namespace AccountingMaterials.WebAPI.Controllers
             await this.materialsRepository.Add(materials);
         }
 
-        [HttpPut("{id:long}")]
-        public async Task Put([FromRoute] long id, [FromBody] Materials materials)
+        public async Task Put(Materials materials)
         {
-            await this.materialsRepository.Update(id, materials);
+            await this.materialsRepository.Update(materials);
         }
 
         [HttpDelete("{id:long}")]
