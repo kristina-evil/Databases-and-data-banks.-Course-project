@@ -1,0 +1,32 @@
+<div *ngIf="employee">
+  <div class="empl">
+
+    <table cellspacing="0" class="example-full-width">
+      <tr>
+        <td>
+          <mat-form-field class="example-form-field">
+            <mat-label>Имя</mat-label>
+            <input [(ngModel)]="employee.name" id="employee-name" matInput type="text">
+            <button (click)="employee.name=''" *ngIf="value" aria-label="Clear" mat-button mat-icon-button matSuffix>
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-form-field">
+            <mat-label>Позиция</mat-label>
+            <input [(ngModel)]="employee.position" id="employee-age" matInput type="text">
+            <button (click)="employee.position=''" *ngIf="employee.position" aria-label="Clear" mat-button
+                    mat-icon-button
+                    matSuffix>
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <button (click)="update()" color="primary" mat-raised-button>Submit</button>
+  </div>
+</div>
