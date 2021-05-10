@@ -38,6 +38,7 @@ namespace AccountingMaterials.WebAPI.Controllers
             await this.materialsRepository.Add(materials);
         }
 
+        [HttpPut]
         public async Task Put(Materials materials)
         {
             await this.materialsRepository.Update(materials);
