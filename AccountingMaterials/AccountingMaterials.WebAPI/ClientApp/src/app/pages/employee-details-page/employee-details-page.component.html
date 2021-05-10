@@ -7,7 +7,7 @@
           <mat-form-field class="example-form-field">
             <mat-label>Имя</mat-label>
             <input [(ngModel)]="employee.name" id="employee-name" matInput type="text">
-            <button (click)="employee.name=''" *ngIf="value" aria-label="Clear" mat-button mat-icon-button matSuffix>
+            <button (click)="employee.name=''" aria-label="Clear" mat-button mat-icon-button matSuffix>
               <mat-icon>close</mat-icon>
             </button>
           </mat-form-field>
@@ -27,6 +27,6 @@
         </td>
       </tr>
     </table>
-    <button (click)="update()" color="primary" mat-raised-button>Submit</button>
+    <button (click)="update()" color="primary" mat-raised-button>Подтвердить</button>
   </div>
 </div>

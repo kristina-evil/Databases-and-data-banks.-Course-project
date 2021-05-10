@@ -1,0 +1,33 @@
+<div *ngIf="material">
+    <div class="empl">
+  
+      <table cellspacing="0" class="example-full-width">
+        <tr>
+          <td>
+            <mat-form-field class="example-form-field">
+              <mat-label>Название</mat-label>
+              <input [(ngModel)]="material.name" id="material-name" matInput type="text">
+              <button (click)="material.name=''" aria-label="Clear" mat-button mat-icon-button matSuffix>
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-form-field">
+              <mat-label>Стоимость</mat-label>
+              <input [(ngModel)]="material.price" id="material-price" matInput type="text">
+              <button (click)="material.price=''" *ngIf="material.price" aria-label="Clear" mat-button
+                      mat-icon-button
+                      matSuffix>
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <button (click)="update()" color="primary" mat-raised-button>Подтвердить</button>
+    </div>
+  </div>
+  

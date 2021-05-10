@@ -14,7 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {EmployeesDataService} from './services/employees.service';
 import {HttpClientModule} from '@angular/common/http';
 import {MaterialsPageComponent} from './pages/materials-page/materials-page.component';
-import {MaterialDetailsComponent} from './pages/material-details-page/material-details.component';
+import {MaterialDetailsPageComponent} from './pages/material-details-page/material-details-page.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import {MaterialDetailsComponent} from './pages/material-details-page/material-d
     AboutPageComponent,
     EmployeeDetailsPageComponent,
     MaterialsPageComponent,
-    MaterialDetailsComponent,
+    MaterialDetailsPageComponent,
   ],
   imports: [
     FormsModule,

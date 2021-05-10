@@ -4,7 +4,7 @@ import {AboutPageComponent} from './pages/about-page/about-page.component';
 import {EmployeesPageComponent} from './pages/employees-page/employees-page.component';
 import {EmployeeDetailsPageComponent} from './pages/employee-details-page/employee-details-page.component';
 import {MaterialsPageComponent} from './pages/materials-page/materials-page.component';
-import {MaterialDetailsComponent} from './pages/material-details-page/material-details.component';
+import {MaterialDetailsPageComponent} from './pages/material-details-page/material-details-page.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'employees', pathMatch: 'full'},
@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'about', component: AboutPageComponent},
   {path: 'contacts', redirectTo: 'about'},
   {path: 'employee-details/:id', component: EmployeeDetailsPageComponent},
-  {path: 'material-details/:id', component: MaterialDetailsComponent},
+  {path: 'material-details/:id', component: MaterialDetailsPageComponent},
 ];
 
 @NgModule({

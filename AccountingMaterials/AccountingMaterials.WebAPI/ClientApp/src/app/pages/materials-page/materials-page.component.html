@@ -3,7 +3,7 @@
 <mat-card *ngFor="let material of materials" class="card" routerLink="/material-details/{{ material.id }}">
   <mat-card-header>
     <mat-icon>more_vert</mat-icon>
-    <mat-card-title>{{material.name}} X {{material.number}}</mat-card-title>
+    <mat-card-title>{{material.name}}</mat-card-title>
     <mat-card-subtitle>{{'$' + material.price }}</mat-card-subtitle>
   </mat-card-header>
 </mat-card>
