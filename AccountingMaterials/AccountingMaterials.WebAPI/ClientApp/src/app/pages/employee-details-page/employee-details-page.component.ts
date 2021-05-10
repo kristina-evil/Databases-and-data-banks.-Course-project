@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { EmployeesDataService } from 'src/app/services/employees.service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {EmployeesDataService} from 'src/app/services/employees.service';
 
-import { Employee } from '../../models/employee.interface';
+import {Employee} from '../../models/employee.interface';
 
 @Component({
   selector: 'kks-details-page',
-  templateUrl: './details-page.component.html',
-  styleUrls: ['./details-page.component.scss'],
+  templateUrl: './employee-details-page.component.html',
+  styleUrls: ['./employee-details-page.component.scss'],
 })
-export class DetailsPageComponent implements OnInit {
+export class EmployeeDetailsPageComponent implements OnInit {
   employee: Employee;
 
   constructor(
     private route: ActivatedRoute,
     private employeesService: EmployeesDataService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.getEmployee();
